@@ -4,7 +4,6 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
-  // TODO: Get user input to create and return an array of employee objects
   const employees = []
   do {
     employees.push({
@@ -26,8 +25,7 @@ const displayAverageSalary = function (employeesArray) {
 }
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
-
-  const rand = Math.floor(Math.random() * employeesArray.length)
+const rand = Math.floor(Math.random() * employeesArray.length)
   console.log(`Congratulations to ${employeesArray[rand].firstName} ${employeesArray[rand].lastName}, our random drawing winner!`)
 }
 /*
@@ -93,37 +91,3 @@ const trackEmployeeData = function () {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
-
-
-
-// function displayAverageSalary(employees) {
-//   let totalSalary = 0;
-//   employees.forEach(employee => {
-//       totalSalary += employee.salary;
-//   });
-
-//   const averageSalary = totalSalary / employees.length;
-//   console.log(`Average Salary: $${averageSalary.toFixed(2)} for ${employees.length} employees.`);
-// }
-
-
-// Sample array of employee objects
-// let employees = [
-//   { firstName: 'John', lastName: 'Doe', salary: 50000 },
-//   { firstName: 'Jane', lastName: 'Smith', salary: 60000 },
-//   { firstName: 'Alice', lastName: 'Johnson', salary: 55000 }
-// ];
-
-// function getRandomEmployee(employees) {
-//   // Generate a random index within the range of the array length
-//   const randomIndex = Math.floor(Math.random() * employees.length);
-
-//   // Access the random employee object using the random index
-//   const randomEmployee = employees[randomIndex];
-
-//   // Display the details of the random employee to the console
-//   console.log(`Random Employee: ${randomEmployee.firstName} ${randomEmployee.lastName} - Salary: $${randomEmployee.salary}`);
-// }
-
-// // Call the function to select and display a random employee
-// getRandomEmployee(employees);
